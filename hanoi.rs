@@ -1,4 +1,4 @@
-noi.fn hanoi(n: i32, x: &str, y: &str, z: &str) {
+fn hanoi(n: i32, x: &str, y: &str, z: &str) {
     if n > 1 {
         hanoi(n - 1, x, z, y)
     }
@@ -11,5 +11,5 @@ noi.fn hanoi(n: i32, x: &str, y: &str, z: &str) {
 fn main() {
     let mut n = String::new();
     std::io::stdin().read_line(&mut n).ok();
-    hanoi(n.trim().parse().unwrap(), "a", "b", "c")
+    hanoi(n.trim().parse().unwrap(), "a", "b", "c");
 }
